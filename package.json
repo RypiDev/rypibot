@@ -1,0 +1,59 @@
+{
+  "name": "@rypi/rypibot",
+  "version": "0.0.0",
+  "private": true,
+  "author": "Walidoux",
+  "bugs": {
+    "url": "https://github.com/RypiDev/rypibot/issues"
+  },
+  "main": "dist/app.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RypiDev/rypibot"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "rypi"
+  ],
+  "scripts": {
+    "dev": "ts-node-dev src/app.ts",
+    "start": "ts-node src/app.ts",
+    "start:prod": "rm -rf dist && node dist/app.js",
+    "build": "tsc",
+    "prepare": "husky install",
+    "commitlint": "commitlint",
+    "lint:typescript": "eslint \"**/*.ts\" --ignore-path \".gitignore\" && tsc --noemit",
+    "lint:prettier": "prettier \".\" --check --ignore-unknown '!**/*.hbs' --ignore-path \".gitignore\"",
+    "lint:editorconfig": "editorconfig-checker"
+  },
+  "dependencies": {
+    "discord.js": "^14.8.0",
+    "dotenv": "^16.0.3"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.5.1",
+    "@commitlint/config-conventional": "^17.4.4",
+    "@types/node": "18.15.11",
+    "@walidoux/eslint-config": "1.0.3",
+    "@walidoux/prettier-config": "1.0.2",
+    "ansi-colors": "^4.1.3",
+    "editorconfig-checker": "^5.0.1",
+    "eslint": "8.37.0",
+    "husky": "^8.0.3",
+    "prettier": "2.8.7",
+    "ts-node": "10.9.1",
+    "ts-node-dev": "1.1.8",
+    "typescript": "5.0.3"
+  },
+  "engines": {
+    "node": ">= 16"
+  },
+  "prettier": "@walidoux/prettier-config",
+  "eslintConfig": {
+    "extends": [
+      "@walidoux/eslint-config"
+    ]
+  }
+}
