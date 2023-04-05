@@ -1,3 +1,4 @@
-import debug from './debug'
+import modCommands from './mod'
+import miscCommands from './misc'
 
-export default [debug]
+export default [miscCommands, modCommands]
