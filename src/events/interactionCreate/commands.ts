@@ -1,16 +1,17 @@
 import commands from '../../commands'
-import type { Command } from '../../types/Command'
+import type { Command, CommandMeta } from '../../types/Command'
 import { event } from '../../utils/Event'
 import { Reply } from '../../utils/Replies'
 
-export const allCommands = commands
-  .map(({ commands }) => {
-    return commands
+export const categoryCommands = commands
+  .map((category) => {
+    return category.commands
   })
   .flat()
-const allCommandsMap = new Map<string, Command>(
-  allCommands.map((c) => {
-    return [c.meta.name, c]
+
+const allCommandsMap = new Map<CommandMeta, Command>(
+  categoryCommands.map((command) => {
+    return [command.meta.name, command]
   })
 )
 
@@ -29,7 +30,7 @@ export default event(
         client,
         interaction,
         log(...args) {
-          log(`[${command.meta.name}]`, ...args)
+          log(`[${command.meta.name as string}]`, ...args)
         }
       })
     } catch (error) {
