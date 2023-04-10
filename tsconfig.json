@@ -21,7 +21,6 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "preserveWatchOutput": true,
-    "skipLibCheck": true,
     "allowJs": false,
     "strict": true,
     "importHelpers": true,
