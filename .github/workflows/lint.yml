@@ -29,16 +29,16 @@ jobs:
           cache: 'pnpm'
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
 
       - name: Linting prettier
-        run: yarn lint:prettier
+        run: pnpm run lint:prettier
 
       - name: Linting typescript
-        run: yarn lint:typescript
+        run: pnpm run lint:typescript
 
       - name: Checking editorconfig
-        run: yarn lint:editorconfig
+        run: pnpm run lint:editorconfig
 
       - name: Linting commit
-        run: yarn commitlint -- --to '${{ github.sha }}'
+        run: pnpm run commitlint -- --to '${{ github.sha }}'
