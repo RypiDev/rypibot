@@ -1,0 +1,30 @@
+color: 0x2c2f33
+description:
+  '> 📜 Comme sur toute plateforme, il est important de respecter quelques
+  règles pour conserver une ambiance saine et plaisante pour tous.'
+
+image:
+  color: 0x3498db
+  file: REGLEMENT.jpg
+
+fields:
+  -
+  - {
+      name: '🔹 1. Règles de vie en communauté',
+      value:
+        "- Respecter la totalité des [TOS](https://discord.com/terms) et les [Community Guidelines](https://discord.com/guidelines) de Discord.\n
+        - Un comportement respectueux est demandé pour chaque membre.\n
+        - Tout type de nuisance à la vie du serveur (spam, mention abusive, dénigrement des développeurs/contributeurs) se verra sanctionné.\n
+        - Les débats autour de sujets jugés sensibles par notre équipe staff se verra interdit et sanctionné si abus.\n
+        - Un comportement nuisible et l'utilisation de Soundboard abusivement en vocal sont bannissables.\n
+        - Les promotions de services payantes de toutes sortes sont strictement interdites au sein du serveur."
+    }
+  -
+  - {
+      name: "🔹 2. Règles du partage d'informations",
+      value:
+        "- Il est interdit de donner des liens que ce soit en message privé ou dans un salon qui amènent vers des sites frauduleux ou des téléchargements illégaux ou à caractère pornographique.\n
+        - Les publicités en message privé sont interdites, un salon dédié à la pub est à votre disposition uniquement pour puber son rétro.\n
+        - La propagation d'informations privées ou personnelles se verra sanctionnée sévèrement.\n
+        - S'approprier tout code open-source de Rypî sous tout autres noms au public sera définitivement banni de ce serveur."
+    }
