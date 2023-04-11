@@ -19,9 +19,7 @@ const RypiClient = new Client({
   ]
 })
 
-const rest = new REST({ version: '10' }).setToken(
-  String(process.env.CLIENT_TOKEN)
-)
+const rest = new REST({ version: '10' }).setToken(String(process.env.CLIENT_TOKEN))
 
 registerEvents(RypiClient, RypiEvents)
 ;(async () => {

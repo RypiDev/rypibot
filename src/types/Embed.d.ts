@@ -1,8 +1,4 @@
-import type {
-  APIApplicationCommandOptionChoice,
-  AttachmentBuilder,
-  EmbedBuilder
-} from 'discord.js'
+import type { APIApplicationCommandOptionChoice, AttachmentBuilder, EmbedBuilder } from 'discord.js'
 
 export interface EmbedYMLBuilder {
   choice: APIApplicationCommandOptionChoice<string>

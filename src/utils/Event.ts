@@ -3,17 +3,11 @@ import type { Client } from 'discord.js'
 import type { Event, EventExec, EventKeys } from '../types/Event'
 import { Logger } from './Logger'
 
-export const event = <T extends EventKeys>(
-  id: T,
-  exec: EventExec<T>
-): Event<T> => {
+export const event = <T extends EventKeys>(id: T, exec: EventExec<T>): Event<T> => {
   return { id, exec }
 }
 
-export const registerEvents = (
-  client: Client,
-  events: Array<Event<any>>
-): void => {
+export const registerEvents = (client: Client, events: Array<Event<any>>): void => {
   for (const event of events)
     client.on(event.id, async (...args) => {
       const props = {

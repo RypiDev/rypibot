@@ -10,9 +10,7 @@ const meta = new SlashCommandBuilder()
   .addStringOption((option) => {
     return option
       .setName('embed')
-      .setDescription(
-        'Met en place des messages embeds pré-définis avec images'
-      )
+      .setDescription('Met en place des messages embeds pré-définis avec images')
       .addChoices(
         ...EMBEDYML_BUILDERS.map((embed) => {
           return embed.choice

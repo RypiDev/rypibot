@@ -27,9 +27,7 @@ export default command(meta, async ({ interaction }) => {
       await interaction.channel?.messages.delete(message)
     })
 
-    const reply = await interaction.reply(
-      `${amount} messages ont été supprimés`
-    )
+    const reply = await interaction.reply(`${amount} messages ont été supprimés`)
 
     return setTimeout(async () => {
       if (!Boolean(reply)) return
