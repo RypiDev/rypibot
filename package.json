@@ -25,19 +25,22 @@
     "prepare": "husky install",
     "commitlint": "commitlint",
     "lint:typescript": "eslint \"**/*.ts\" --ignore-path \".gitignore\" && tsc --noemit",
-    "lint:prettier": "prettier \".\" --check --ignore-unknown '!**/*.hbs' --ignore-path \".gitignore\"",
+    "lint:prettier": "prettier \".\" --check --ignore-unknown '!**/*.{yaml,yml}' --ignore-path \".gitignore\"",
     "lint:editorconfig": "editorconfig-checker"
   },
   "dependencies": {
     "discord.js": "^14.8.0",
-    "dotenv": "^16.0.3"
+    "dotenv": "^16.0.3",
+    "js-yaml": "^4.1.0",
+    "zod": "^3.21.4"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.5.1",
     "@commitlint/config-conventional": "^17.4.4",
+    "@types/js-yaml": "^4.0.5",
     "@types/node": "18.15.11",
     "@walidoux/eslint-config": "1.0.3",
-    "@walidoux/prettier-config": "1.0.2",
+    "@walidoux/prettier-config": "1.0.3",
     "ansi-colors": "^4.1.3",
     "editorconfig-checker": "^5.0.1",
     "eslint": "8.37.0",
@@ -48,7 +51,7 @@
     "typescript": "5.0.3"
   },
   "engines": {
-    "node": ">= 16"
+    "node": ">= 18"
   },
   "prettier": "@walidoux/prettier-config",
   "eslintConfig": {
