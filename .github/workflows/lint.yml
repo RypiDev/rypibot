@@ -7,20 +7,24 @@ on:
     branches: [develop, main]
 
 jobs:
-  linting:
+  lint:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18]
 
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v3.0.0
 
-      - name: Use Node.js
+      - name: Use NodeJS ${{ matrix.node-version }}
         uses: actions/setup-node@v3.1.1
         with:
-          node-version: 16.x
+          node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
 
       - name: Install dependencies
-        run: yarn --frozen-lockfile
+        run: pnpm install
 
       - name: Linting prettier
         run: yarn lint:prettier
