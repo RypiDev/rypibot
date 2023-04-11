@@ -25,7 +25,7 @@
     "prepare": "husky install",
     "commitlint": "commitlint",
     "lint:typescript": "eslint \"**/*.ts\" --ignore-path \".gitignore\" && tsc --noemit",
-    "lint:prettier": "prettier \".\" --check --ignore-unknown '!**/*.hbs' --ignore-path \".gitignore\"",
+    "lint:prettier": "prettier \".\" --check --ignore-unknown '!**/*.{yaml,yml}' --ignore-path \".gitignore\"",
     "lint:editorconfig": "editorconfig-checker"
   },
   "dependencies": {
